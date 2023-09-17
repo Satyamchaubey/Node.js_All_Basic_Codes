@@ -1,0 +1,22 @@
+const http = require('http');
+const port = 8000;
+const fs = require('fs');
+
+const server = http.createServer((req,res)=>{
+    console.log(req.url);
+
+    fs.readFile("Index.html", (err,data)=>{
+        if(err){
+            console.log(err);
+            return;
+        }
+       return res.end(data);
+    })
+})
+
+server.listen(port,(err)=>{
+    if(err){
+        console.log(err);
+    }
+    console.log("All ohky hai server.. kam kr rha hai lo port number...:"+port);
+})

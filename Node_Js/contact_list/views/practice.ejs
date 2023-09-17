@@ -1,0 +1,33 @@
+<html>
+    <head>
+        
+        <title>
+            <%= locals.title %>
+    
+        </title>
+    </head>
+    <body>
+        <h1>
+            Hii This my Second page of rendering through Ejs!!
+            <h2>And your contact_list stored</h2>
+        </h1>
+
+        <ul>
+            <% for(let i=1; i<10; i++) { %>
+                <li>
+                    <%= i %>
+                </li>
+
+                <% }%>
+        </ul>
+
+        <% if(true){ %>
+            <h1>nishu</h1>
+
+            <%} else { %>
+                <h1>satyam</h1>
+                
+                <% } %>
+    </body>
+
+</html>
